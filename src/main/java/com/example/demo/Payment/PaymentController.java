@@ -1,8 +1,8 @@
 package com.example.demo.Payment;
 
-import com.sun.xml.internal.ws.client.ResponseContext;
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
+
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -43,6 +43,13 @@ public class PaymentController {
         paymentService.deletePayment(paymentId);
 
         return new ResponseTransfer("payment deleted with id= "+paymentId);
+
+    }
+
+    @GetMapping(path = "{paymentId}")
+    public Payment getPaymenetById(@PathVariable("paymentId") Long paymentId){
+        return  paymentService.getPaymentById(paymentId);
+
 
     }
 

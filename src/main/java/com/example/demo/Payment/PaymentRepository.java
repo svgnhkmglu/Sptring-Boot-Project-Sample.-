@@ -12,6 +12,9 @@ public interface PaymentRepository extends JpaRepository<Payment,Long> {
     @Query("SELECT s FROM Payment s WHERE s.email =?1")
     Optional<Payment> findPaymentByEmail(String email);
 
+    @Query("SELECT s FROM Payment s WHERE s.id =?1")
+    Optional<Payment> findById(Long id);
+
 
 
 

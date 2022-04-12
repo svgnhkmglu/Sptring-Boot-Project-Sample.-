@@ -51,10 +51,9 @@ public class PaymentService {
     }
 
 
+    public Payment getPaymentById(Long paymentId) {
 
-
-
-
-
+        return paymentRepository.getById(paymentId);
+    }
 }
 
