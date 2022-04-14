@@ -33,26 +33,4 @@ public class PaymentConfig {
 
 
     }
-
-    public static String method(String str){
-
-        String answer="";
-
-        for (int i = 0; i <str.length() ; i++) {
-
-            int count=0;
-            for (int j = 0; j <str.length() ; j++) {
-
-                if(str.charAt(i)==str.charAt(j)){
-                    count++;
-                }
-
-            }
-
-            answer+=str.charAt(i)+""+count;
-        }
-
-        return answer;
-
-    }
 }
