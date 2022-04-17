@@ -13,6 +13,8 @@ import java.time.LocalDate;
 @AllArgsConstructor
 public class Payment {
 
+    // added new library lombok.
+
     @Id
     @SequenceGenerator(
             name = "payment_sequence",
